@@ -1,1 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 @import "tailwindcss";
+
+
+@theme {
+--color-verde-oscuro: #0E2F28;  /* Verde muy oscuro  tarjetas por detras*/
+  --color-verde-medio: #3B493A;   /* Verde medio */
+  --color-verde-medio-2: #3B493A; /* Repetido, lo dejo igual */
+  --color-marron-oscuro: #A46C28; /* Marrón oscuro */
+  --color-naranja-oscuro: #BF7E45;/* Naranja/marrón claro letra*/
+  --color-naranja-claro: #F29C50; /* Naranja claro */
+  --color-amarillo: #F2CB57;      /* Amarillo */
+  --font-playfair: "Playfair Display", serif;
+    --font-lora: "Lora", serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-lora {
+  font-family: var(--font-lora);
+}
