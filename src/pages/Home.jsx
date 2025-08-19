@@ -45,15 +45,16 @@ const Home = () => {
 
     return (
         <>
-            <main className="relative min-h-screen text-emerald-50">
+              <main className="relative min-h-screen bg-black">
                 {/* 1) IMAGEN DE FONDO (ocupa toda la pantalla) */}
                 <img
                     src={fondo}
                     alt="Mesa esotérica con velas"
-                    className="w-full h-auto block select-none"
+                    className="w-full h-[100svh] object-cover block select-none lg:h-auto lg:object-contain"
+                    
                 ></img>
 
-                <div className="absolute inset-x-0 top-4 px-4 flex justify-center">
+                  <div className="absolute inset-x-0 top-4 px-4 flex justify-center">
                     {/* Contenedor centrado con ancho máximo para que el grid no se desparrame */}
                     <div className="w-full max-w-6xl">
                         {/* ESTADO: Cargando */}
@@ -69,10 +70,13 @@ const Home = () => {
                                 <p className="text-red-300">{error}</p>
                             </div>
                         )}
-
+                            <div>
+                                <h1 className="text-l md:text-3xl text-center text-naranja-oscuro font-playfair drop-shadow-lg mb-2">"EL VIAJE A TRAVES DEL TAROT"</h1>
+                                <p className="text-xs md:text-xs text-center text-naranja-oscuro font-lora mb-1">Haz click en cualquier carta para ver su detalle</p>
+                            </div>
                         {/* GRID de cartas (solo cuando ya cargó y no hay error) */}
                         {!loading && !error && (
-                            <div className="grid gap-2 md:gap-5 justify-center grid-cols-6 sm:grid-cols-8 md:grid-cols-7">
+                            <div className="grid gad-1 md:gap-2 lg:gap-2.5 justify-center grid-cols-5 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
                                 {cards.map((card) => {
                                     return (
                                         // Envolvemos tu Card para poder escalarla sin tocar tu componente
@@ -88,7 +92,12 @@ const Home = () => {
                         )}
                     </div>
                 </div>
+            
+
+
             </main>
+
+
 
 
         </>

@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 @import "tailwindcss";
 
+/* iPad / tablets: mostrar la imagen COMPLETA (sin recortes) en estos tamaños exactos */
+
+
 
 @theme {
 --color-verde-oscuro: #0E2F28;  /* Verde muy oscuro  tarjetas por detras*/
@@ -20,4 +23,15 @@
 
 .font-lora {
   font-family: var(--font-lora);
+}
+
+/* Tablets en vertical: mostrar la imagen COMPLETA (sin recortes) */
+@media (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+  .hero-img {
+    width: 100vw !important;        /* ocupa todo el ancho del viewport */
+    height: 100svh !important;      /* y toda la altura real del viewport */
+    object-fit: contain !important;  /* se ve ENTERA, sin recortar */
+    object-fit: cover;
+    display: block;
+  }
 }
