@@ -7,6 +7,6 @@ import routerTarot from './router/Router'//Separar la lógica de rutas en router
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    < RouterProvider router={routerTarot}/>
-  </StrictMode>,
+    <RouterProvider router={routerTarot}/>
+  </StrictMode>
 )
