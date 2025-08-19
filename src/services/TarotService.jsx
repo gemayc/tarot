@@ -9,6 +9,7 @@ export const getAllCards = async () => {
     
  } catch (error){
     console.log(`Error al obtener cartas:  ${error}`);
+    return [];
    
  }
     
@@ -16,11 +17,12 @@ export const getAllCards = async () => {
 
 export const getCardById = async (id) => {
     try{
-        const response = axios.get (`${API_BASE}/${id}`);
+        const response = await axios.get (`${API_BASE}/${id}`);
         return response.data;
 
     } catch (error) {
         console.log(`Error al obtener carta con id ${error}`)
+        return null;
 
     }
 };

@@ -5,6 +5,7 @@ import fondo from "../assets/img/fondo.jpg"
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 
+
 const Home = () => {
     // ESTADOS: cartas, cargando, error
     const [cards, setCards] = useState([]);
@@ -45,16 +46,17 @@ const Home = () => {
 
     return (
         <>
-              <main className="relative min-h-screen bg-black">
+              <main className="relative min-h-screen">
                 {/* 1) IMAGEN DE FONDO (ocupa toda la pantalla) */}
-                <img
+                 {/* <img
                     src={fondo}
                     alt="Mesa esotérica con velas"
-                    className="w-full h-[100svh] object-cover block select-none lg:h-auto lg:object-contain"
+                    // className="w-full h-[100svh] object-cover block select-none lg:h-auto lg:object-contain"
                     
-                ></img>
+                    
+                ></img>  */}
 
-                  <div className="absolute inset-x-0 top-4 px-4 flex justify-center">
+                  <div className="absolute inset-x-0 top-4 px-4 flex justify-center z-10">
                     {/* Contenedor centrado con ancho máximo para que el grid no se desparrame */}
                     <div className="w-full max-w-6xl">
                         {/* ESTADO: Cargando */}
@@ -71,12 +73,12 @@ const Home = () => {
                             </div>
                         )}
                             <div>
-                                <h1 className="text-l md:text-3xl text-center text-naranja-oscuro font-playfair drop-shadow-lg mb-2">"EL VIAJE A TRAVES DEL TAROT"</h1>
+                                <h1 className="text-l md:text-3xl text-center text-naranja-oscuro font-playfair drop-shadow-lg mb-2">EL VIAJE A TRAVÉS DEL TAROT</h1>
                                 <p className="text-xs md:text-xs text-center text-naranja-oscuro font-lora mb-1">Haz click en cualquier carta para ver su detalle</p>
                             </div>
                         {/* GRID de cartas (solo cuando ya cargó y no hay error) */}
                         {!loading && !error && (
-                            <div className="grid gad-1 md:gap-2 lg:gap-2.5 justify-center grid-cols-5 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
+                            <div className="grid gad-1 md:gap-2 lg:gap-2.5 mb-18 justify-center grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
                                 {cards.map((card) => {
                                     return (
                                         // Envolvemos tu Card para poder escalarla sin tocar tu componente
@@ -97,7 +99,7 @@ const Home = () => {
 
             </main>
 
-
+                        
 
 
         </>
