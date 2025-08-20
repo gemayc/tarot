@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllCards } from "../services/TarotService";
 import Card from "../components/Card";
+import { Link } from "react-router-dom";
 
 const Reading = () => {
     //Estados que necesitamos aqui guardamos la informacion
@@ -52,6 +53,7 @@ const Reading = () => {
         } else if (currentStep === 'futuro') {
             setCurrentStep('futuro');
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });//esto sube al principio suavemente es decir a las cartas donde esta pasado,resente,futuro
 
     };
 
@@ -112,17 +114,39 @@ const Reading = () => {
     return (
         <>
             <main className="min-h-screen p-4">
+                <div className="mt-2 px-5">
+                 <Link
+              to="/"
+              className="rounded-xl px-3 py-1.5 ring-1 bg-verde-oscuro text-naranja-oscuro hover:scale-105 transition text-sm md:text-base"
+            >
+              Volver al mazo
+            </Link>
+            </div>
                 <div className="max-w-6xl mx-auto">
                     {/* TITULO E INSTRUCCIONES  */}
                     <div className="text-center mb-6">
-                        <h1 className="text-l md:text-3xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-4 mb-2" >LECTURA DEL TAROT</h1>
-                        <p className="text-lg text-naranja-oscuro font-lora mt-4 mb-4">{getInstructionMessage()}</p>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-20 mb-2" >LECTURA DEL TAROT</h1>
+                        <p className="text-xl md:text-2xl lg:text-3xl text-naranja-oscuro font-lora mt-4 mb-4">{getInstructionMessage()}</p>
                         {/* Botón de reiniciar (solo si ya empezamos a seleccionar) */}
                         {(selectedCards.pasado || selectedCards.presente || selectedCards.futuro) && (
                             <button
                                 onClick={resetReading}
-                                className="rounded-xl px-3 py-1.5 ring-1 bg-verde-oscuro text-naranja-oscuro hover:scale-105 transition text-sm md:text-base"> Reinciar Lectura</button>
+                                className="rounded-xl px-3 py-1.5 ring-1 bg-verde-oscuro text-naranja-oscuro hover:scale-105 transition text-sm md:text-base"> Reiniciar Lectura</button>
                         )}
+                    </div>
+
+                     {/* PROGRESO */}
+                    <div className="mt-6 text-center mb-4">
+                        <div className="flex justify-center gap-2 mb-2">
+                            <div className={`w-3 h-3 rounded-full ${selectedCards.pasado ? 'bg-verde-oscuro' : 'bg-marron-oscuro'}`}></div>
+                            <div className={`w-3 h-3 rounded-full ${selectedCards.presente ? 'bg-verde-oscuro' : 'bg-marron-oscuro'}`}></div>
+                            <div className={`w-3 h-3 rounded-full ${selectedCards.futuro ? 'bg-verde-oscuro' : 'bg-marron-oscuro'}`}></div>
+
+                        </div>
+                         <p className="text-xs md:text-l lg:text-xl text-naranja-oscuro font-lora">
+                            {Object.values(selectedCards).filter(card => card !== null).length} / 3 cartas seleccionadas
+                        </p> 
+
                     </div>
                     {/* 🃏 MOSTRAR LAS CARTAS SELECCIONADAS (ojo aqui cambie === por !==) */}
                     {currentStep !== 'terminado' && (
@@ -131,7 +155,7 @@ const Reading = () => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                                 {/* PASADO */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold font-playfair text-naranja-oscuro mb-2">PASADO</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2">PASADO</h3>
                                     {selectedCards.pasado && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -152,7 +176,7 @@ const Reading = () => {
                                 </div>
                                 {/* PRESENTE */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold font-playfair text-naranja-oscuro mb-2">PRESENTE</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2 ">PRESENTE</h3>
                                     {selectedCards.presente && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -173,7 +197,7 @@ const Reading = () => {
                                 </div>
                                 {/* FUTURO */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold font-playfair text-naranja-oscuro mb-2">FUTURO</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2">FUTURO</h3>
                                     {selectedCards.futuro && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -203,11 +227,11 @@ const Reading = () => {
                     {/*  GRID DE CARTAS PARA SELECCIONAR */}
                     {currentStep !== 'terminado' && (
                         <div>
-  <h3 className="text-center text-naranja-oscuro mb-4 font-lora">
+  <h3 className="text-center text-xs md:text-m lg:text-xl text-naranja-oscuro mb-4 font-lora">
     Haz click en una carta para seleccionarla
   </h3>
 
-  <div className="grid gap-2 justify-center grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
+  <div className="grid gap-2 justify-center grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-11">
     {allCards.map((card) => {
       const selected = isCardSelected(card);
       const disabled = selectedCount === 3 || selected; // bloquea si ya hay 3 o si esta carta ya fue elegida
@@ -231,19 +255,6 @@ const Reading = () => {
 </div>
                     )}
 
-                    {/* PROGRESO */}
-                    <div className="mt-6 text-center">
-                        <div className="flex justify-center gap-2 mb-2">
-                            <div className={`w-3 h-3 rounded-full ${selectedCards.pasado ? 'bg-verde-oscuro' : 'bg-gray-300'}`}></div>
-                            <div className={`w-3 h-3 rounded-full ${selectedCards.presente ? 'bg-verde-oscuro' : 'bg-gray-300'}`}></div>
-                            <div className={`w-3 h-3 rounded-full ${selectedCards.futuro ? 'bg-verde-oscuro' : 'bg-gray-300'}`}></div>
-
-                        </div>
-                        <p className="text-sm text-naranja-oscuro font-lora">
-                            {Object.values(selectedCards).filter(card => card !== null).length} / 3 cartas seleccionadas
-                        </p>
-
-                    </div>
 
                 </div>
 

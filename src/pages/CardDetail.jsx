@@ -98,7 +98,7 @@ const CardDetail = () => {
       <main className="min-h-screen">
         <div className="max-w-4xl mx-auto px-4 py-6">
           {/* Contenedor de botones con flex → izquierda y derecha */}
-          <div className="flex justify-between items-center mb-4 gap-2">
+          <div className="flex justify-between items-center mb-10 mt-40 gap-2">
             {/* Botón a la izquierda */}
             <button
               onClick={() => navigate(-1)}
@@ -117,7 +117,7 @@ const CardDetail = () => {
             </Link>
           </div>
 
-          <h1 className="text-xl md:text-4xl font-playfair font-bold text-naranja-oscuro text-center mb-6">
+          <h1 className="text-xl md:text-4xl lg:text-5xl font-playfair font-bold text-naranja-oscuro text-center mb-6">
             {title}
           </h1>
 
