@@ -73,8 +73,8 @@ const Home = () => {
                             </div>
                         )}
                             <div>
-                                <h1 className="text-l md:text-3xl text-center text-naranja-oscuro font-playfair drop-shadow-lg mb-2">EL VIAJE A TRAVÉS DEL TAROT</h1>
-                                <p className="text-xs md:text-xs text-center text-naranja-oscuro font-lora mb-1">Haz click en cualquier carta para ver su detalle</p>
+                                <h1 className="text-l md:text-3xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-4 mb-2">EL VIAJE A TRAVÉS DEL TAROT</h1>
+                                <p className="text-xs md:text-m lg:text-xl text-center text-naranja-oscuro font-lora mb-2">Haz click en cualquier carta para ver su detalle</p>
                             </div>
                         {/* GRID de cartas (solo cuando ya cargó y no hay error) */}
                         {!loading && !error && (
