@@ -1,0 +1,7 @@
+<!-- favicon.svg  |  Tarot minimal -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Borde de la carta -->
+  <rect x="14" y="8" width="36" height="48" rx="6" stroke="#F2CB57" stroke-width="3"></rect>
+  <!-- Estrella central -->
+  <path d="M32 20 L35 29 L44 32 L35 35 L32 44 L29 35 L20 32 L29 29 Z" fill="#F2CB57"></path>
+</svg>
