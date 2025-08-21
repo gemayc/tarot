@@ -125,7 +125,7 @@ const Reading = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* TITULO E INSTRUCCIONES  */}
                     <div className="text-center mb-6">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-20 mb-2" >LECTURA DEL TAROT</h1>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-10 md:mt-16 lg:mt-16 mb-2" >LECTURA DEL TAROT</h1>
                         <p className="text-xl md:text-2xl lg:text-3xl text-naranja-oscuro font-lora mt-4 mb-4">{getInstructionMessage()}</p>
                         {/* Botón de reiniciar (solo si ya empezamos a seleccionar) */}
                         {(selectedCards.pasado || selectedCards.presente || selectedCards.futuro) && (
@@ -231,7 +231,7 @@ const Reading = () => {
     Haz click en una carta para seleccionarla
   </h3>
 
-  <div className="grid gap-2 justify-center grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-11">
+  <div className="grid gap-2 justify-center mb-40 md:mb-48 lg:mb-56 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-11">
     {allCards.map((card) => {
       const selected = isCardSelected(card);
       const disabled = selectedCount === 3 || selected; // bloquea si ya hay 3 o si esta carta ya fue elegida

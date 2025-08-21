@@ -78,7 +78,7 @@ const Home = () => {
                             </div>
                         {/* GRID de cartas (solo cuando ya cargó y no hay error) */}
                         {!loading && !error && (
-                            <div className="grid gad-1 md:gap-2 lg:gap-2.5 mb-28 justify-center grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
+                            <div className="grid gad-1 md:gap-2 lg:gap-2.5 mb-24 md:mb-28 lg:mb-32 justify-center grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7">
                                 {cards.map((card) => {
                                     return (
                                         // Envolvemos tu Card para poder escalarla sin tocar tu componente

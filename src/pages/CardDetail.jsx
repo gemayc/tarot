@@ -98,7 +98,7 @@ const CardDetail = () => {
       <main className="min-h-screen">
         <div className="max-w-4xl mx-auto px-4 py-6">
           {/* Contenedor de botones con flex → izquierda y derecha */}
-          <div className="flex justify-between items-center mb-10 mt-40 gap-2">
+          <div className="flex justify-between items-center mb-10 mt-8 md:mt-16 lg:mt-16 gap-2">
             {/* Botón a la izquierda */}
             <button
               onClick={() => navigate(-1)}
@@ -122,7 +122,7 @@ const CardDetail = () => {
           </h1>
 
           {/* Sección con flex → dos tarjetas dentro */}
-          <section className="mt-6 flex flex-col md:flex-row gap-6 justify-center items-start">
+          <section className="mt-6 flex flex-col md:flex-row  mb-24 md:mb-28 lg:mb-36 gap-6 justify-center items-start">
 
             {/* Tarjeta Tarot */}
             <div className="w-[300px] md:w-[600px] lg:w-[1500px] h-[70vh] mx-auto rounded-2xl p-4 bg-emerald-950/40 ring-1 ring-emerald-900/40 shadow-lg text-center flex flex-col">
