@@ -16,6 +16,12 @@ Una experiencia web sencilla y elegante para:
 
 La app está pensada para ser **responsive**, accesible con teclado y rápida (Vite + Tailwind, imágenes lazy, y fondo optimizado).
 
+![](./src/assets/img-readme/home.png)
+![](./src/assets/img-readme/CardDetail.png)
+![](./src/assets/img-readme/Reading.png)
+![](./src/assets/img-readme/Reading-1.png)
+![](./src/assets/img-readme/Reading-2.png)
+![](./src/assets/img-readme/Reading-3.png)
 ---
 
 ## ⚡ Características
@@ -23,7 +29,6 @@ La app está pensada para ser **responsive**, accesible con teclado y rápida (V
 - 🃏 **Grid de cartas** responsive con hover y estados (loading / error).
 - 🔍 **Detalle** de carta con imagen y contenido.
 - 🧭 **Lectura guiada** de 3 cartas (paso a paso, con indicador de progreso).
-- ⌨️ **Accesibilidad**: navegación por teclado, foco visible, mensajes `aria-live`.
 - 🌗 **Fondo global** con efecto fijo en *Home* y comportamiento personalizado en otras páginas.
 - 🌐 **API pública** (MockAPI) consumida via **Axios**.
 - 🧩 **Arquitectura** por páginas y componentes reutilizables.
@@ -35,8 +40,8 @@ La app está pensada para ser **responsive**, accesible con teclado y rápida (V
 
 El diseño está basado en un prototipo de **Figma** (tipografías, composición y paleta coherentes con el tema del tarot).
 
-> (Opcional) Puedes añadir capturas del prototipo si las guardas en  
-> `src/assets/img-readme/` y enlazarlas aquí con `![](./src/assets/img-readme/1.png)`.
+
+![](./src/assets/img-readme/prototipo-figma.png)
 
 ### 🎨 Paleta de colores (proyecto)
 
@@ -78,3 +83,38 @@ El diseño está basado en un prototipo de **Figma** (tipografías, composición
 git clone https://github.com/gemayc/tarot.git
 cd tarot
 npm install
+```
+---
+
+### 🗂️ Estructura de archivos
+```bash
+
+/public
+  ├── fondo2.(png|webp)      # imagen de fondo global
+  └── favicon / assets estáticos
+
+/src
+  ├── assets/                # imágenes del proyecto
+  ├── components/
+  │   └── Card.jsx           # carta reutilizable
+  ├── layout/
+  │   └── Footer.jsx
+  ├── pages/
+  │   ├── Home.jsx           # grid de cartas
+  │   ├── Reading.jsx        # lectura Pasado/Presente/Futuro
+  │   └── CardDetail.jsx     # detalle de carta
+  ├── router/
+  ├── services/
+  │   └── TarotService.jsx   # axios + consumo de API (usa VITE_API_URL)
+  ├── index.css              # estilos globales + tailwind
+  └── main.jsx               # entrada de la app
+
+  ---
+## 👩‍💻 Desarrolladora
+[Gema](https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/) - Product Owner / Developer
+
+### 📄 Licencia
+
+MIT — Uso educativo y demostrativo.
+
+
