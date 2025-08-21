@@ -25,7 +25,9 @@
 
 }
 
-
+html, body, #root {
+  min-height: 100%;
+}
  html, body {
   margin: 0;
   padding: 0;
@@ -33,6 +35,8 @@
   background-image: url("/public/fondo2.png");
   background-size: cover;
   min-height: 100svh; 
+  background-position: center top;
+  background-repeat: no-repeat;
 
  
 
