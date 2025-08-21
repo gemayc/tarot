@@ -66,7 +66,7 @@ const CardDetail = () => {
       // Al salir de Reading → devuelve el comportamiento global (fixed)
       document.body.classList.remove("no-fixed");
     };
-  }, []);
+  }, []);//esto lo hize porque la imagen de fondo se veia mal en el home y bien Reading y en CardDetail
 
   // 5) Mientras carga, enseñamos un mensajito simple
   if (loading) {
@@ -124,7 +124,7 @@ const CardDetail = () => {
             </Link>
           </div>
 
-          <h1 className="text-xl md:text-4xl lg:text-5xl font-playfair font-bold text-naranja-oscuro text-center mb-6">
+          <h1 className="text-xl md:text-4xl lg:text-5xl font-playfair font-bold text-naranja-oscuro text-center mb-6 text-shadow-strong">
             {title}
           </h1>
 

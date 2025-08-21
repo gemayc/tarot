@@ -25,23 +25,6 @@
 
 }
 
-/* html, body, #root {
-  min-height: 100%;
-}
- html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  background-image: url("/public/fondo2.png");
-  background-size: cover;
-  min-height: 100svh; 
-  background-position: center top;
-  
-
- 
-
-}  */
-/* html { background-attachment: scroll; }  */
 
 html, body, #root { min-height: 100%; }
 
@@ -57,7 +40,7 @@ html, body {
 }
 
 body.no-fixed {
-  background-attachment: scroll !important; /* fuerza scroll en esas páginas */
+  background-attachment: scroll !important; /* fuerza scroll en esas páginas anula el fixed en CardDetail y en Reading*/
 }
 
 /* Tablets en vertical: mostrar la imagen completa */
@@ -66,5 +49,41 @@ body.no-fixed {
     background-size: cover;   /* imagen entera */
      background-position:50%; 
     /* background-position se mantiene, bandas serán negras por el background-color */
+  }
+}
+
+/* Utilidades de sombra/contorno para texto */
+@layer utilities {
+  /* Sombra suave (poco intrusiva) */
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0,0,0,.55);
+  }
+
+  /* Sombra fuerte (más contraste) */
+  .text-shadow-strong {
+    text-shadow:
+      0 1px 0 rgba(0,0,0,.9),
+      0 2px 6px rgba(0,0,0,.55);
+  }
+
+  /* Contorno simulado con varias sombras (compatible con todos los navegadores) */
+  .text-outline {
+    text-shadow:
+      -1px 0 0 #000,
+       1px 0 0 #000,
+       0 -1px 0 #000,
+       0  1px 0 #000,
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000,
+       0  2px 6px rgba(0,0,0,.5);
+  }
+ /* Si el navegador soporta stroke nativo (Chrome/Safari), añádelo */
+  @supports (-webkit-text-stroke: 1px black) {
+    .text-stroke {
+      -webkit-text-stroke: .6px #000;
+      paint-order: stroke fill;
+    }
   }
 }

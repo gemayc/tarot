@@ -43,7 +43,7 @@ const Reading = () => {
     return () => {
       // Al salir de Reading → devuelve el comportamiento global (fixed)
       document.body.classList.remove("no-fixed");
-    };
+    };// esto lo hize porque la imagen de fondo se veia mal en el home y bien Reading y en CardDetail
   }, []);
     //HACEMOS UNA FUNCION PARA SELECIONAR UNA CARTA
     const handleCardSelection = (card) => {
@@ -134,8 +134,8 @@ const Reading = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* TITULO E INSTRUCCIONES  */}
                     <div className="text-center mb-6">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-10 md:mt-16 lg:mt-16 mb-2" >LECTURA DEL TAROT</h1>
-                        <p className="text-xl md:text-2xl lg:text-3xl text-naranja-oscuro font-lora mt-4 mb-4">{getInstructionMessage()}</p>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold text-naranja-oscuro font-playfair drop-shadow-lg mt-10 md:mt-16 lg:mt-16 mb-2 text-shadow-strong text-stroke" >LECTURA DEL TAROT</h1>
+                        <p className="text-xl md:text-2xl lg:text-3xl text-naranja-oscuro font-lora mt-4 mb-4 text-shadow-strong ">{getInstructionMessage()}</p>
                         {/* Botón de reiniciar (solo si ya empezamos a seleccionar) */}
                         {(selectedCards.pasado || selectedCards.presente || selectedCards.futuro) && (
                             <button
@@ -152,7 +152,7 @@ const Reading = () => {
                             <div className={`w-3 h-3 rounded-full ${selectedCards.futuro ? 'bg-verde-oscuro' : 'bg-marron-oscuro'}`}></div>
 
                         </div>
-                         <p className="text-xs md:text-l lg:text-xl text-naranja-oscuro font-lora">
+                         <p className="text-xs md:text-l lg:text-xl text-naranja-oscuro font-lora text-shadow-strong ">
                             {Object.values(selectedCards).filter(card => card !== null).length} / 3 cartas seleccionadas
                         </p> 
 
@@ -164,7 +164,7 @@ const Reading = () => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                                 {/* PASADO */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2">PASADO</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2 text-shadow-strong text-stroke">PASADO</h3>
                                     {selectedCards.pasado && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -185,7 +185,7 @@ const Reading = () => {
                                 </div>
                                 {/* PRESENTE */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2 ">PRESENTE</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2 text-shadow-strong text-stroke">PRESENTE</h3>
                                     {selectedCards.presente && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -206,7 +206,7 @@ const Reading = () => {
                                 </div>
                                 {/* FUTURO */}
                                 <div className="text-center">
-                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2">FUTURO</h3>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-playfair text-naranja-oscuro mb-2 text-shadow-strong text-stroke">FUTURO</h3>
                                     {selectedCards.futuro && (
                                         <div className="bg-emerald-950/40 rounded-xl p-4 h-[400px] flex flex-col">
                                             <div className="mx-auto w-32 aspect-[3/5] mb-3">
@@ -236,7 +236,7 @@ const Reading = () => {
                     {/*  GRID DE CARTAS PARA SELECCIONAR */}
                     {currentStep !== 'terminado' && (
                         <div>
-  <h3 className="text-center text-xs md:text-m lg:text-xl text-naranja-oscuro mb-4 font-lora">
+  <h3 className="text-center text-xs md:text-m lg:text-xl text-naranja-oscuro mb-4 font-lora text-shadow-strong ">
     Haz click en una carta para seleccionarla
   </h3>
 
