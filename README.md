@@ -71,6 +71,29 @@ El diseño está basado en un prototipo de **Figma** (tipografías, composición
 
 ---
 
+## 🌍 Variables de entorno
+
+Crea un archivo `.env` en la raíz del proyecto con:
+VITE_API_URL=https://tu-api-url
+
+---
+
+## 📦 Dependencias principales
+
+- `react-router-dom` → enrutado de páginas  
+- `axios` → consumo de API  
+- `tailwindcss` → estilos rápidos y responsive  
+
+---
+
+## 🧪 Testing
+
+- Configuración inicial con **Vitest** + **React Testing Library**.  
+- Tests básicos de renderizado (`Card`, `Footer`).  
+
+---
+
+
 ## ⚙️ Instalación (local)
 
 ### 📋 Prerrequisitos
@@ -110,11 +133,12 @@ npm install
   └── main.jsx               # entrada de la app
 
   ---
-## 👩‍💻 Desarrolladora
-[Gema](https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/) - Product Owner / Developer
+👩‍💻 Desarrolladora
 
-### 📄 Licencia
+Gema
+ - Product Owner / Developer
+
+📄 Licencia
 
 MIT — Uso educativo y demostrativo.
-
 
