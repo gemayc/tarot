@@ -22,6 +22,7 @@ La app está pensada para ser **responsive**, accesible con teclado y rápida (V
 ![](./src/assets/img-readme/Reading-1.png)
 ![](./src/assets/img-readme/Reading-2.png)
 ![](./src/assets/img-readme/Reading-3.png)
+
 ---
 
 ## ⚡ Características
@@ -113,7 +114,7 @@ npm install
 ```bash
 
 /public
-  ├── fondo2.(png|webp)      # imagen de fondo global
+  ├── fondo2.(png)      # imagen de fondo global
   └── favicon / assets estáticos
 
 /src
@@ -133,10 +134,10 @@ npm install
   └── main.jsx               # entrada de la app
 
   ---
-👩‍💻 Desarrolladora
+👩‍💻 Autora
 
-Gema
- - Product Owner / Developer
+Gema Yébenes — Product Owner / Developer
+LinkedIn: https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/
 
 📄 Licencia
 
