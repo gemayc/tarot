@@ -37,14 +37,14 @@ const Reading = () => {
         fecthCards();
     }, []);
 
-//      useEffect(() => {
-//     // Al entrar en Reading → desactiva el fixed del body
-//     document.body.classList.add("no-fixed");
-//     return () => {
-//       // Al salir de Reading → devuelve el comportamiento global (fixed)
-//       document.body.classList.remove("no-fixed");
-//     };
-//   }, []);
+     useEffect(() => {
+    // Al entrar en Reading → desactiva el fixed del body
+    document.body.classList.add("no-fixed");
+    return () => {
+      // Al salir de Reading → devuelve el comportamiento global (fixed)
+      document.body.classList.remove("no-fixed");
+    };
+  }, []);
     //HACEMOS UNA FUNCION PARA SELECIONAR UNA CARTA
     const handleCardSelection = (card) => {
         //solo permitimos sellecionar si aun no hemos terminado
