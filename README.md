@@ -16,14 +16,12 @@ Una experiencia web sencilla y elegante para:
 
 La app está pensada para ser **responsive**, accesible con teclado y rápida (Vite + Tailwind, imágenes lazy, y fondo optimizado).
 
-<video src="./src/assets/img-readme/demo-tarot.mp4"
-       controls
-       autoplay
-       loop
-       muted
-       playsinline
-       style="max-width: 100%; border-radius: 12px;">
-</video>
+![](./src/assets/img-readme/home.png)
+![](./src/assets/img-readme/CardDetail.png)
+![](./src/assets/img-readme/Reading.png)
+![](./src/assets/img-readme/Reading-1.png)
+![](./src/assets/img-readme/Reading-2.png)
+![](./src/assets/img-readme/Reading-3.png)
 
 ---
 
