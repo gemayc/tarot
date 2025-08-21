@@ -42,7 +42,7 @@ const Home = () => {
         navigate(`/card/${card.id}`);
     };
 
-
+    
 
     return (
         <>

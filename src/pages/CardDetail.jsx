@@ -106,8 +106,6 @@ const CardDetail = () => {
             >
               Volver al mazo
             </button>
-
-
             {/* Link a la derecha */}
             <Link
               to="/reading"

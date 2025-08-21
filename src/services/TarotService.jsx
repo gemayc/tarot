@@ -1,6 +1,8 @@
 import axios from "axios";
  
-const API_BASE = "https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot"
+const API_BASE = import.meta.env.VITE_API_URL; // esto se pone asi porque voy a subirlo a vercel viene del archivo.env.local
+
+//funcion para obtener las cartas
 
 export const getAllCards = async () => {
  try {
@@ -26,4 +28,3 @@ export const getCardById = async (id) => {
 
     }
 };
-
