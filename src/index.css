@@ -41,21 +41,23 @@
  
 
 }  */
-
+/* html { background-attachment: scroll; }  */
 
 html, body, #root { min-height: 100%; }
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #000; /* color base */
-  
-    
+   background-color: #000;  
   background-image:url("/fondo2.png");          
   background-repeat: no-repeat;
   background-size: cover;  /* grad ocupa todo; imagen se ajusta */
   background-position: center 0;
-  /* background-attachment: fixed */
+  background-attachment: fixed  
+}
+
+body.no-fixed {
+  background-attachment: scroll !important; /* fuerza scroll en esas páginas */
 }
 
 /* Tablets en vertical: mostrar la imagen completa */

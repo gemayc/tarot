@@ -37,6 +37,16 @@ const Home = () => {
 
     }, []);
 
+//     useEffect(() => {
+// //   Activa el efecto parallax solo en Home
+//   document.body.classList.add("bg-fixed");    // Tailwind: background-attachment: fixed
+
+//   return () => {
+//     // Al salir de Home, vuelve al comportamiento normal
+//     document.body.classList.remove("bg-fixed");
+//   };
+// }, []);
+
     // 5) Al hacer click en una carta → vamos a /card/:id
     const handleCardClick = (card) => {
         navigate(`/card/${card.id}`);

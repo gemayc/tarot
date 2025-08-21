@@ -59,6 +59,15 @@ const CardDetail = () => {
     fetchCard()
   }, [id]);//  Si cambia el "id" (otra carta), repetimos el proceso.
 
+   useEffect(() => {
+    // Al entrar en Reading → desactiva el fixed del body
+    document.body.classList.add("no-fixed");
+    return () => {
+      // Al salir de Reading → devuelve el comportamiento global (fixed)
+      document.body.classList.remove("no-fixed");
+    };
+  }, []);
+
   // 5) Mientras carga, enseñamos un mensajito simple
   if (loading) {
     return (
