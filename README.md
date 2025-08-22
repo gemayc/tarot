@@ -16,12 +16,8 @@ Una experiencia web sencilla y elegante para:
 
 La app está pensada para ser **responsive**, accesible con teclado y rápida (Vite + Tailwind, imágenes lazy, y fondo optimizado).
 
-![](./src/assets/img-readme/home.png)
-![](./src/assets/img-readme/CardDetail.png)
-![](./src/assets/img-readme/Reading.png)
-![](./src/assets/img-readme/Reading-1.png)
-![](./src/assets/img-readme/Reading-2.png)
-![](./src/assets/img-readme/Reading-3.png)
+![](./src/assets/img-readme/tarot1.png)
+![](./src/assets/img-readme/tarot2.png.png)
 
 ---
 
