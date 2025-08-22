@@ -130,11 +130,14 @@ npm install
   └── main.jsx               # entrada de la app
 
   ---
-👩‍💻 Autora
+  ```
 
-[Gema](https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/) - Product Owner / Developer
+### 👩‍💻 Desarrolladora
 
-📄 Licencia
+[Gema Yébenes Caballero](https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/)  
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/gema-y%C3%A9benes-caballero-83b6a6100/)
+
+### 📄 Licencia
 
 MIT — Uso educativo y demostrativo.
 
