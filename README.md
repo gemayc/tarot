@@ -86,8 +86,8 @@ VITE_API_URL=https://tu-api-url
 ## 🧪 Testing
 
 - Configuración inicial con **Vitest** + **React Testing Library**.  
-- Tests básicos de renderizado (`Card`, `Footer`).  
-
+- Tests básicos de renderizado (`CardDetail`, `Footer`).  
+![](./src/assets/img-readme/tests.png)
 ---
 
 

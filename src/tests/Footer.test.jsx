@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Footer from "../components/Footer";
-import { describe, expect } from "vitest";
+import { describe, expect, beforeEach, test } from "vitest";
 import { MemoryRouter } from "react-router-dom";
 
 describe("footer", () => { //El beforeEach se pone cuando vamos hacer mas de un test asi y se mete dentro de esa funcion y se tiene que poner asi.
